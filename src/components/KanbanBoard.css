@@ -1,0 +1,176 @@
+.kanban-board {
+  display: flex;
+  gap: 20px;
+  padding-top: 15px;
+}
+
+.kanban-column {
+  flex: 1;
+  max-height: calc(100vh - 150px); /* Prevent columns from taking full screen height */
+  overflow-y: auto; /* Enable scrolling if content exceeds the max height */
+  background-color: #f8f9fa; /* Adjust the background if needed */
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.kanban-column h2 {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.priority-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}
+
+.kanban-column .card {
+  margin-bottom: 10px;
+  background: white;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.kanban-column .card:last-child {
+  margin-bottom: 0;
+}
+
+.space-icon {
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space between content and icons */
+  align-items: center; /* Vertically center the items */
+  padding: 10px; /* Add some padding around */
+  
+  border-radius: 5px;
+  width: 420px; /* Optional: rounded corners */
+}
+
+.content {
+  flex-grow: 1; /* Allow content to take available space */
+}
+
+.add-icon {
+  display: flex; /* Flex layout for icons */
+  gap: 8px; /* Space between icons */
+}
+
+.add-icon svg { /* Assuming the icons are SVGs */
+  font-size: 24px; /* Adjust the size of the icons */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  color: #333; /* Icon color */
+}
+
+.add-icon svg:hover { /* Change color on hover */
+  color: #007bff; /* Color on hover */
+}
+
+.card {
+  background: white; /* Background color for the card */
+  padding: 10px; /* Padding inside the card */
+  border-radius: 4px; /* Rounded corners for the card */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  margin-bottom: 10px; /* Space between cards */
+}
+
+.card-header  {
+   display: flex; 
+   align-items: center;  
+  /* Arrange items in a column */
+}
+.checkbox-title {
+  display: flex; /* Align items in a row */
+  align-items: center; 
+  padding-right: 5px;/* Center items vertically */
+}
+
+.check {
+  display: none; /* Hide the default checkbox */
+}
+
+.custom-checkbox {
+  width: 14px; /* Width of the circular checkbox */
+  height: 14px; /* Height of the circular checkbox */
+  border: 2px solid #666; /* Border color */
+  border-radius: 50%; /* Make it circular */
+  cursor: pointer; /* Change cursor to pointer */
+  position: relative; /* For absolute positioning of checkmark */
+  display: flex; /* Flexbox for centering the checkmark */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+.check:checked + .custom-checkbox {
+  background-color: #007bff; /* Background color when checked */
+  border-color: #007bff; /* Change border color when checked */
+}
+
+.check:checked + .custom-checkbox::after {
+  content: ''; /* Create a pseudo-element for the checkmark */
+  width: 10px; /* Checkmark width */
+  height: 10px; /* Checkmark height */
+  background: white; /* Checkmark color */
+  border-radius: 50%; /* Make the checkmark circular */
+}
+
+
+.ticket-description {
+  margin-top: 5px; /* Space above the description */
+  font-size: 0.9rem; /* Smaller font size for description */
+  color: #666; /* Description color */
+}
+
+.bottom.icon {
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Center items vertically */
+  margin-top: 10px; /* Space above the bottom section */
+}
+
+.card-icons {
+  display: flex; /* Flex layout for icons */
+  align-items: center; /* Center icons vertically */
+  margin-right: 10px; /* Space between icons and text */
+}
+
+.card-icon {
+  font-size: 20px; /* Size of the three-dot icon */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  color: #333; /* Icon color */
+}
+
+.bottom.icon div {
+  display: flex; /* Use flexbox for icon and text */
+  align-items: center; /* Center them vertically */
+  
+  border-radius: 4px; /* Rounded corners for the border */
+  padding: 5px 10px; /* Padding inside the border */
+  margin-top: 10px; /* Space above the bottom icon section */
+  background-color: #f9f9f9; /* Light background color for contrast */
+   /* Smooth transition for border color */
+}
+
+.bottom div{
+  border: 2px solid #666; /* Solid border */
+  transition: border-color 0.3s ease;
+}
+
+/* Change border color on hover */
+.bottom.icon div:hover {
+  border-color: #007bff; /* Change to primary color on hover */
+}
+
+
+.bottom.icon h3 {
+  margin: 0; /* Remove default margin from the heading */
+  font-size: 1rem; /* Adjust font size as needed */
+  color: #727272; /* Text color */
+}
+
+/* Additional styles for the dot icon */
+.bottom.icon svg {
+  margin-right: 5px; /* Space between dot and text */
+  fill: #5e6b78; /* Optional: color for the dot */
+}
+

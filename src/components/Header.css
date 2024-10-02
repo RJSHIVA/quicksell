@@ -1,0 +1,96 @@
+/* Basic navbar styling */
+.navbar {
+    background-color: #f9f9f9; /* Milk white appearance */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative; /* Make navbar relative for correct popup positioning */
+  }
+  
+  .navbar-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Button styling */
+  .popup-btn {
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .popup-btn:hover {
+    background-color: #eaeaea;
+  }
+  
+  /* Popup container */
+  .popup {
+    position: absolute;
+    top: 100%; /* Position right below the button */
+    left: 0; /* Align to the left of the button */
+    margin-top: 8px; /* Add space between the button and the popup */
+    background-color: #fffefe;
+    padding: 15px;
+    border: 1px solid #0c0a0a;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    z-index: 1000;
+
+  }
+  
+  /* Group and Sort Sections */
+  .group-by, .sort-by {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+    width: 200px;
+    height: 50px;
+    justify-content: space-between;
+    position:-ms-page;
+  }
+  
+  h3 {
+    font-size: 18px;
+    color: #4e4848;
+    margin-bottom: 10px;
+  }
+  
+  /* Select dropdown styling */
+  select {
+    width: 50%;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    cursor: pointer;
+  }
+  
+  /* Make select scrollable if content overflows */
+  select {
+    max-height: 50px;
+    /* overflow-y: auto; */
+  }
+  
+  select option {
+    padding: 10px;
+    background-color: #fff;
+    color: #333;
+  }
+  
+  select:focus {
+    outline: none;
+    border-color: #888;
+  }
+  
+  select option:hover {
+    background-color: #eaeaea;
+  }
+  
