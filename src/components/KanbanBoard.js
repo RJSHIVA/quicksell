@@ -1,20 +1,18 @@
 import React from 'react';
 import Card from './card';
 import './KanbanBoard.css';
-import { IoIosAddCircleOutline } from "react-icons/io"; // Importing the icon
+import { IoIosAddCircleOutline } from "react-icons/io"; 
 import { PiDotsThree } from "react-icons/pi";
 
 const KanbanBoard = ({ tickets, users, groupBy, sortBy }) => {
-  // Mapping of priority levels to their labels and corresponding paths
   const priorityDetails = {
-    4: { label: 'Urgent', icon: '/Img - High Priority.svg'  },
+    4: { label: 'Urgent', icon: '/Img - High Priority.svg' },
     3: { label: 'High', icon: '/Img - High Priority.svg' },
     2: { label: 'Medium', icon: '/Img - Medium Priority.svg' },
     1: { label: 'Low', icon: '/Img - Low Priority.svg' },
     0: { label: 'No priority', icon: '/no-priority.svg' },
   };
 
-  // Group tickets based on the selected groupBy value
   const groupTickets = (tickets) => {
     if (groupBy === 'user') {
       return users.reduce((acc, user) => {
@@ -38,7 +36,6 @@ const KanbanBoard = ({ tickets, users, groupBy, sortBy }) => {
     }
   };
 
-  // Sorting function to handle tickets based on the selected sortBy value
   const sortTickets = (tickets) => {
     return tickets.sort((a, b) => {
       if (sortBy === 'priority') {
@@ -57,11 +54,10 @@ const KanbanBoard = ({ tickets, users, groupBy, sortBy }) => {
     return acc;
   }, {});
 
-return (
+  return (
     <div className="kanban-board">
       {Object.keys(sortedGroupedTickets).map((key) => (
         <div key={key} className="kanban-column">
-          {/* Render the priority label or the group key (user, status, etc.) with item count */}
           <h2>
             {groupBy === 'priority' ? (
               <>
@@ -91,7 +87,6 @@ return (
             )}
           </h2>
           {sortedGroupedTickets[key].map((ticket) => {
-            // Find the user for the current ticket
             const user = users.find(user => user.id === ticket.userId);
             return (
               <Card key={ticket.id} ticket={ticket} user={user} />

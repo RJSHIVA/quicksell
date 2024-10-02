@@ -6,9 +6,9 @@
 
 .kanban-column {
   flex: 1;
-  max-height: calc(100vh - 150px); /* Prevent columns from taking full screen height */
-  overflow-y: auto; /* Enable scrolling if content exceeds the max height */
-  background-color: #f8f9fa; /* Adjust the background if needed */
+  max-height: calc(100vh - 150px);
+  overflow-y: auto;
+  background-color: #f8f9fa;
   padding: 10px;
   border-radius: 8px;
 }
@@ -39,138 +39,130 @@
 }
 
 .space-icon {
-  display: flex; /* Use flexbox for layout */
-  justify-content: space-between; /* Space between content and icons */
-  align-items: center; /* Vertically center the items */
-  padding: 10px; /* Add some padding around */
-  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
   border-radius: 5px;
-  width: 420px; /* Optional: rounded corners */
+  width: 420px;
 }
 
 .content {
-  flex-grow: 1; /* Allow content to take available space */
+  flex-grow: 1;
 }
 
 .add-icon {
-  display: flex; /* Flex layout for icons */
-  gap: 8px; /* Space between icons */
+  display: flex;
+  gap: 8px;
 }
 
-.add-icon svg { /* Assuming the icons are SVGs */
-  font-size: 24px; /* Adjust the size of the icons */
-  cursor: pointer; /* Change cursor to pointer on hover */
-  color: #333; /* Icon color */
+.add-icon svg {
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
 }
 
-.add-icon svg:hover { /* Change color on hover */
-  color: #007bff; /* Color on hover */
+.add-icon svg:hover {
+  color: #007bff;
 }
 
 .card {
-  background: white; /* Background color for the card */
-  padding: 10px; /* Padding inside the card */
-  border-radius: 4px; /* Rounded corners for the card */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-  margin-bottom: 10px; /* Space between cards */
+  background: white;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
 }
 
-.card-header  {
-   display: flex; 
-   align-items: center;  
-  /* Arrange items in a column */
+.card-header {
+  display: flex;
+  align-items: center;
 }
+
 .checkbox-title {
-  display: flex; /* Align items in a row */
-  align-items: center; 
-  padding-right: 5px;/* Center items vertically */
+  display: flex;
+  align-items: center;
+  padding-right: 5px;
 }
 
 .check {
-  display: none; /* Hide the default checkbox */
+  display: none;
 }
 
 .custom-checkbox {
-  width: 14px; /* Width of the circular checkbox */
-  height: 14px; /* Height of the circular checkbox */
-  border: 2px solid #666; /* Border color */
-  border-radius: 50%; /* Make it circular */
-  cursor: pointer; /* Change cursor to pointer */
-  position: relative; /* For absolute positioning of checkmark */
-  display: flex; /* Flexbox for centering the checkmark */
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
+  width: 14px;
+  height: 14px;
+  border: 2px solid #666;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .check:checked + .custom-checkbox {
-  background-color: #007bff; /* Background color when checked */
-  border-color: #007bff; /* Change border color when checked */
+  background-color: #007bff;
+  border-color: #007bff;
 }
 
 .check:checked + .custom-checkbox::after {
-  content: ''; /* Create a pseudo-element for the checkmark */
-  width: 10px; /* Checkmark width */
-  height: 10px; /* Checkmark height */
-  background: white; /* Checkmark color */
-  border-radius: 50%; /* Make the checkmark circular */
+  content: '';
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 50%;
 }
 
-
 .ticket-description {
-  margin-top: 5px; /* Space above the description */
-  font-size: 0.9rem; /* Smaller font size for description */
-  color: #666; /* Description color */
+  margin-top: 5px;
+  font-size: 0.9rem;
+  color: #666;
 }
 
 .bottom.icon {
-  display: flex; /* Use flexbox for layout */
-  align-items: center; /* Center items vertically */
-  margin-top: 10px; /* Space above the bottom section */
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
 }
 
 .card-icons {
-  display: flex; /* Flex layout for icons */
-  align-items: center; /* Center icons vertically */
-  margin-right: 10px; /* Space between icons and text */
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
 }
 
 .card-icon {
-  font-size: 20px; /* Size of the three-dot icon */
-  cursor: pointer; /* Change cursor to pointer on hover */
-  color: #333; /* Icon color */
+  font-size: 20px;
+  cursor: pointer;
+  color: #333;
 }
 
 .bottom.icon div {
-  display: flex; /* Use flexbox for icon and text */
-  align-items: center; /* Center them vertically */
-  
-  border-radius: 4px; /* Rounded corners for the border */
-  padding: 5px 10px; /* Padding inside the border */
-  margin-top: 10px; /* Space above the bottom icon section */
-  background-color: #f9f9f9; /* Light background color for contrast */
-   /* Smooth transition for border color */
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+  padding: 5px 10px;
+  margin-top: 10px;
+  background-color: #f9f9f9;
 }
 
-.bottom div{
-  border: 2px solid #666; /* Solid border */
+.bottom div {
+  border: 2px solid #666;
   transition: border-color 0.3s ease;
 }
 
-/* Change border color on hover */
 .bottom.icon div:hover {
-  border-color: #007bff; /* Change to primary color on hover */
+  border-color: #007bff;
 }
-
 
 .bottom.icon h3 {
-  margin: 0; /* Remove default margin from the heading */
-  font-size: 1rem; /* Adjust font size as needed */
-  color: #727272; /* Text color */
+  margin: 0;
+  font-size: 1rem;
+  color: #727272;
 }
 
-/* Additional styles for the dot icon */
 .bottom.icon svg {
-  margin-right: 5px; /* Space between dot and text */
-  fill: #5e6b78; /* Optional: color for the dot */
+  margin-right: 5px;
+  fill: #5e6b78;
 }
-

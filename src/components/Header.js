@@ -5,10 +5,9 @@ import { MdKeyboardArrowDown } from "react-icons/md";
 
 const Header = ({ setGroupBy, setSortBy }) => {
   const [showPopup, setShowPopup] = useState(false);
-  const [selectedGroupBy, setSelectedGroupBy] = useState('');  // Track selected "Group By"
-  const [selectedSortBy, setSelectedSortBy] = useState('');    // Track selected "Sort By"
+  const [selectedGroupBy, setSelectedGroupBy] = useState('');
+  const [selectedSortBy, setSelectedSortBy] = useState('');
 
-  // Load stored preferences from localStorage on component mount
   useEffect(() => {
     const storedGroupBy = localStorage.getItem('groupBy');
     const storedSortBy = localStorage.getItem('sortBy');
@@ -24,27 +23,24 @@ const Header = ({ setGroupBy, setSortBy }) => {
     }
   }, [setGroupBy, setSortBy]);
 
-  // Toggle popup visibility
   const togglePopup = () => {
     setShowPopup(!showPopup);
   };
 
-  // Handle "Group By" option change
   const handleGroupByChange = (e) => {
     const value = e.target.value;
     setSelectedGroupBy(value);
     setGroupBy(value);
-    localStorage.setItem('groupBy', value); // Save preference to localStorage
-    setShowPopup(false); // Close popup after selection
+    localStorage.setItem('groupBy', value);
+    setShowPopup(false);
   };
 
-  // Handle "Sort By" option change
   const handleSortByChange = (e) => {
     const value = e.target.value;
     setSelectedSortBy(value);
     setSortBy(value);
-    localStorage.setItem('sortBy', value); // Save preference to localStorage
-    setShowPopup(false); // Close popup after selection
+    localStorage.setItem('sortBy', value);
+    setShowPopup(false);
   };
 
   return (
